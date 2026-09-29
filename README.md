@@ -12,6 +12,16 @@ Our project investigates which electrophysiological behaviours of biological neu
 
 *(Note: Model implementations and comparisons will be built in subsequent project steps).*
 
+
+## Project Status
+- **Step 1 — Allen data feasibility**: COMPLETE
+- **Step 1 validation**: COMPLETE
+- **Step 2 — Passive membrane model**: COMPLETE
+- **Step 3 — LIF**: PLANNED / IN PROGRESS
+- **Step 4 — FHN**: PLANNED
+- **Step 5 — HH**: PLANNED
+- **Final comparative analysis**: PLANNED
+
 ---
 
 ## Step 1 — Allen Cell Types Data Pipeline
@@ -57,7 +67,7 @@ Our project investigates which electrophysiological behaviours of biological neu
   - No data quality issues (missing values or clipping) were observed.
 
 ### What Step 2 Will Investigate
-- **Passive Membrane Model**: We will fit the linear RC subthreshold response ($, $	au_m$, $) using the verified hyperpolarizing sweeps (24-29). Note: No computational models have been implemented yet.
+- **Passive Membrane Model**: We will fit the linear RC subthreshold response ($, $\tau_m$, $) using the verified hyperpolarizing sweeps (24-29). Note: No computational models have been implemented yet.
 
 ---
 
@@ -92,7 +102,7 @@ Creator-INCM-project-/
 - **Findings**:
   - $V_{rest}$: -76.93 mV
   - $R_m$: 188.71 MOhm
-  - $	au_m$: 18.92 ms
+  - $\tau_m$: 18.92 ms
   - $C_m$: 100.28 pF
 - **Validation**: The fitted passive model reproduced the measured subthreshold response of Sweep 24 (-110 pA) accurately with an RMSE of 2.845 mV.
 - **How to Run**:
