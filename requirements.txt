@@ -1,0 +1,20 @@
+# Core Scientific and Electrophysiology Dependencies
+# Note: AllenSDK 2.16.2 utilizes NumPy 1.x deprecation warnings and internal APIs.
+# On Python 3.12, numpy==1.26.4 and scipy==1.13.1 provide fully pre-compiled, stable compatibility.
+numpy>=1.26.0,<2.0.0
+scipy>=1.13.0,<1.14.0
+pandas>=2.0.0
+matplotlib>=3.8.0
+h5py>=3.10.0
+pynwb>=2.6.0
+hdmf>=3.12.0
+requests>=2.30.0
+
+# Allen Institute SDK
+allensdk>=2.16.2
+SimpleITK>=2.3.0
+argschema>=3.0.0
+
+# Jupyter Notebook Environment
+ipykernel>=6.29.0
+nbformat>=5.9.0
