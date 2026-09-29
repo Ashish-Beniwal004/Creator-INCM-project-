@@ -84,6 +84,27 @@ Creator-INCM-project-/
     └── step1_data_feasibility.md        # Step 1 documentation & provenance
 ```
 
+
+## Step 2 — Passive Membrane Model
+
+- **Purpose**: Estimate the subthreshold passive properties of the selected neuron using linear RC dynamics and validate the fit against experimental data.
+- **Current Status**: **SUCCESS**
+- **Findings**:
+  - $V_{rest}$: -76.93 mV
+  - $R_m$: 188.71 MOhm
+  - $	au_m$: 18.92 ms
+  - $C_m$: 100.28 pF
+- **Validation**: The fitted passive model reproduced the measured subthreshold response of Sweep 24 (-110 pA) accurately with an RMSE of 2.845 mV.
+- **How to Run**:
+  ```bash
+  python src/allen_data/passive_model.py
+  ```
+- **Output**:
+  - Passive model parameter CSVs: `results/step2/passive_parameters_summary.csv`
+  - I-V Curve and Model Validation Plots in `results/step2/`
+  - Detailed model documentation: `docs/step2_passive_model.md`
+
+---
 ---
 
 ## Data Provenance
