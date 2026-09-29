@@ -125,3 +125,24 @@ python src/allen_data/load_recording.py
 # 5. (Optional) Run the exploration Jupyter notebook
 jupyter execute notebooks/01_allen_data_exploration.ipynb
 ```
+
+## 9. Step 1 Validation
+
+### Verified Sweep Information
+We performed a rigorous programmatic validation of sweeps 24-29 and 32-35. The extracted parameters matched expectations:
+- **Stimulus Window**: .020$ s to .020$ s (1.0 second duration).
+- **Hyperpolarizing Sweeps (24-29)**: $-110$ to $-10$ pA. All yielded 0 spikes. The voltage traces visually confirmed their suitability for passive parameter estimation ($, $	au_m$).
+- **Subthreshold (32)**: $+50$ pA yielded 0 spikes.
+- **Suprathreshold (33-35)**: 
+  - $+70$ pA $\to$ 7 spikes
+  - $+90$ pA $\to$ 12 spikes
+  - $+110$ pA $\to$ 17 spikes
+
+### F-I Data Observations
+The constructed initial F-I curve clearly demonstrates a distinct rheobase between $+50$ pA and $+70$ pA, followed by a monotonically increasing, graded firing rate. This sharp transition will be critical for tuning the Leaky Integrate-and-Fire model.
+
+### Adaptation Observation
+**Sweep 34 Adaptation**: Spike frequency adaptation was definitively observed. The Inter-Spike Interval (ISI) increased monotonically by roughly .28$ ms per spike across the pulse.
+
+### Data-Quality Concerns
+- **Baseline Stability**: Sweeps 27 and 32 showed very minor baseline standard deviation ($\sim 1.1$ mV). This is biologically normal and well within acceptable noise limits for fitting. No missing values or clipping were observed.

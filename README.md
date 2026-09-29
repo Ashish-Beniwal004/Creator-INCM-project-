@@ -43,6 +43,22 @@ Our project investigates which electrophysiological behaviours of biological neu
   - Figure 2: `results/step1/allen_voltage_trace.png` (Membrane Voltage vs Time in mV)
   - Detailed feasibility report: `docs/step1_data_feasibility.md`
 
+
+### Step 1 Validation Pass
+- **Validated Sweeps**: Programmatically verified hyperpolarizing (24-29) and depolarizing (32-35) sweeps.
+- **Initial Experimental F-I Relationship**: 
+  - Observed distinct rheobase between $+50$ pA and $+70$ pA. 
+  - Sweep 33 (+70 pA): 7 spikes. 
+  - Sweep 34 (+90 pA): 12 spikes. 
+  - Sweep 35 (+110 pA): 17 spikes.
+- **Electrophysiological Features**:
+  - The neuron exhibits spike-frequency adaptation (ISI increased by ~5.28 ms/spike in Sweep 34).
+  - Hyperpolarizing sweeps show excellent subthreshold stability, suitable for passive property extraction.
+  - No data quality issues (missing values or clipping) were observed.
+
+### What Step 2 Will Investigate
+- **Passive Membrane Model**: We will fit the linear RC subthreshold response ($, $	au_m$, $) using the verified hyperpolarizing sweeps (24-29). Note: No computational models have been implemented yet.
+
 ---
 
 ## Repository Structure
